@@ -14,6 +14,27 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				<xs:element name="Spaces" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SpaceBoundaries" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Openings" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
 				<xs:element name="OrthogonalCamera" type="OrthogonalCamera" minOccurs="0"/>
 				<xs:element name="PerspectiveCamera" type="PerspectiveCamera" minOccurs="0"/>
 				<xs:element name="Lines" minOccurs="0">
@@ -49,6 +70,10 @@
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
+			<xs:attribute name="AllComponentsVisible" type="xs:boolean" default="true"/>
+			<xs:attribute name="AllSpacesVisible" type="xs:boolean" default="false"/>
+			<xs:attribute name="AllSpaceBoundariesVisible" type="xs:boolean" default="false"/>
+			<xs:attribute name="AllOpeningsVisible" type="xs:boolean" default="false"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:complexType name="OrthogonalCamera">
